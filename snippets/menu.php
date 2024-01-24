@@ -14,10 +14,10 @@ if (!class_exists('bootstrap_menu')) {
   function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
    $item_html = '';
    parent::start_el($item_html, $item, $depth, $args);
-      $item_html = str_replace('<a', '<a class="navlink navlink_lvl2"', $item_html);
+      $item_html = str_replace('<a', '<a class="nav__link nav__link_lvl2"', $item_html);
       $item_html = str_replace('</a>', '</a>', $item_html);
    if ($depth == 0 ) {
-      $item_html = str_replace('<a class="navlink navlink_lvl2"', '<a class="navlink navlink_lvl1"', $item_html);
+      $item_html = str_replace('<a class="nav__link nav__link_lvl2"', '<a class="nav__link nav__link_lvl1"', $item_html);
       $item_html = str_replace('</a>', '</a>', $item_html);
    }
    $output .= $item_html;
